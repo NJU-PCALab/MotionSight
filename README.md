@@ -8,6 +8,30 @@
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://github.com/NJU-PCALab/MotionSight)
 [![Website](https://img.shields.io/badge/🌐%20Website-Project%20Page-green)](https://nju-pcalab.github.io/projects/MotionSight/)
 
+<h2>MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h2>
+
+<div style="font-size: 1.2em">
+    <a href="https://github.com/natsunoshion">Yipeng Du</a><sup>1*</sup> &nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=F11LXvYAAAAJ&hl=en">Tiehan Fan</a><sup>1*</sup> &nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=PXmlku8AAAAJ&hl=en">Kepan Nan</a><sup>1,2</sup> &nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=Dzr3D_EAAAAJ&hl=en">Rui Xie</a><sup>1,2</sup> &nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=yWq1Fd4AAAAJ&hl=zh-CN">Penghao Zhou</a><sup>2</sup> &nbsp;&nbsp;
+    <a href="https://implus.github.io/">Xiang Li</a><sup>3</sup> &nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=6CIDtZQAAAAJ&&hl=en">Jian Yang</a><sup>1</sup> &nbsp;&nbsp;
+    <a href="https://zhenheny.github.io/">Zhengheng Yang</a><sup>2</sup> &nbsp;&nbsp;
+    <a href="https://tyshiwo.github.io/">Ying Tai</a><sup>1†</sup> &nbsp;&nbsp;
+</div>
+
+<div style="font-size: 1em; margin-top: 10px">
+    <sup>1</sup> Nanjing University &nbsp;&nbsp;
+    <sup>2</sup> ByteDance &nbsp;&nbsp;
+    <sup>3</sup> Nankai University
+</div>
+
+<div style="font-size: 0.9em; margin-top: 8px; font-style: italic">
+    * Equal contribution. &nbsp;&nbsp; † Corresponding author.
+</div>
+
 </div>
 
 Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion understanding. This guide provides instructions for environment setup, model preparation, and evaluation.
