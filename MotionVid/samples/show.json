@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What actions are being performed by the objects in this video?",
+    "video": "pexels_landscape_landscape_7895832_002.mp4",
+    "chosen": "A long train is seen traveling on a curved track through a vast, arid desert landscape under a clear blue sky. The train consists of multiple freight cars, including both gray and red ones, and it moves steadily along the track. The surrounding area is barren with sparse vegetation and dry, sandy terrain. In the background, there are distant mountains and a few scattered clouds in the sky.",
+    "rejected": "The video showcases a long freight train traveling through a vast desert landscape. The train, composed of multiple cargo cars, moves steadily along a curved track. Throughout the sequence, the train progresses from the left side of the frame towards the right, maintaining a consistent speed. The surrounding desert remains static, with no changes in the terrain or background. The sky stays clear and blue, and distant mountains are visible on the horizon. The motion of the train is the primary dynamic element, with the cargo cars following the curve of the track as they traverse the arid landscape."
+  },
+  {
+    "question": "How does the camera movement contribute to the viewing experience?",
+    "video": "pixabay_Beach_Sunrise_37084_001.mp4",
+    "chosen": "The video opens with an aerial shot of a vast, dusty desert landscape, showcasing a red vehicle driving across the sandy terrain. The camera remains elevated, providing a broad view of the scene, including tire tracks and sparse vegetation. As the red vehicle moves forward, the camera follows it, maintaining a steady aerial perspective. The dust trail kicked up by the vehicle becomes more pronounced, emphasizing its movement. In the background, another vehicle is visible, also generating a dust cloud as it travels along a similar path. The camera continues to follow the red vehicle, capturing its steady progression through the desert. The dust cloud from the second vehicle grows more prominent, highlighting its ongoing movement. Throughout the sequence, the camera maintains a consistent aerial follow shot, focusing on the red vehicle as it navigates the rugged, track-marked terrain. The scene progresses with both vehicles continuing their journey through the expansive, dusty landscape, with the camera consistently tracking their movement from above.",
+    "rejected": "The camera starts with a high-angle view of the desert, showing the two vehicles driving on the dusty terrain. As the vehicles move forward, the camera gradually zooms in, maintaining focus on the vehicle in the foreground while the vehicle ahead becomes more prominent. The camera continues to zoom in, capturing the increasing dust trails left by the vehicles. The camera angle remains steady, with the vehicles becoming more distinct as they drive further into the frame. The camera's zoom-in continues, emphasizing the movement and dust trails of the vehicles. The camera maintains its focus on the vehicles, with the background becoming slightly more blurred due to the dust. The camera's zoom-in reaches its peak, with the vehicles clearly visible and the dust trails extending further behind them."
+  },
+  {
+    "question": "How are the objects moving in this video?",
+    "video": "v_JNr0oI927ng_t0.13-5.64.mp4",
+    "chosen": "A woman in a black and red swimsuit stands on a diving board in an indoor swimming pool facility, with empty bleachers and bright overhead lights in the background. She bends her knees slightly and looks down at the water below, maintaining this position for a few moments. She then straightens her legs and arms, standing upright on the diving board, facing the water.",
+    "rejected": "A person stands on the edge of a diving board, facing the pool. They raise one arm, then lower it, maintaining a poised stance. The individual remains still, preparing for a dive, with minimal movement throughout the sequence. The background shows empty bleachers and a pool area, with no significant changes in the environment."
+  },
+  {
+    "question": "How do the objects interact with each other in this video?",
+    "video": "-eq3I7gRqTI_000100_000110.mp4",
+    "chosen": "A person is mowing a lawn with a push lawn mower. They start at the top of the frame and move forward, pushing the mower across the grass. As they progress, a clear path is left behind them. The person continues to move forward, adjusting their pace slightly. A red truck drives by in the background, passing from left to right. The person continues mowing, moving steadily across the lawn, leaving a neatly trimmed path in their wake.",
+    "rejected": "A man wearing a blue shirt, beige shorts, and a white cap is pushing a red lawnmower on a well-maintained lawn in a suburban neighborhood. The man moves the lawnmower forward, cutting the grass in straight lines. As he continues mowing, a red truck drives by on the road in the background. The man then turns the lawnmower to the right, moving towards the right side of the frame. The background shows a residential area with houses, parked cars, and some greenery."
+  },
+  {
+    "question": "How are the objects moving in this video?",
+    "video": "DKZPW.mp4",
+    "chosen": "A man is sitting on the stairs in a house, holding and interacting with a small animal in his lap. He then kisses the animal and continues to hold it. The man picks up a plastic bag from the stairs, stands up, and places the bag on the ground. He puts the animal down and starts to open the bag. The man then walks down the stairs, looking at the bag.",
+    "rejected": "A person is sitting on a carpeted staircase, holding a small dog. The person interacts with the dog, then reaches down to pick up a white plastic bag from the stairs. They stand up, holding the bag, and begin to descend the stairs. The person pauses to adjust the bag in their hand before continuing to walk down the stairs."
+  }
+]
