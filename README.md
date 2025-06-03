@@ -2,12 +2,6 @@
 
 <div align="center">
 
-<img src="logo.png" alt="MotionSight Logo" width="1000"/>
-
-[![Paper](https://img.shields.io/badge/📝%20Paper-arXiv-red)](https://arxiv.org/abs/2506.01674)
-[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://github.com/NJU-PCALab/MotionSight)
-[![Website](https://img.shields.io/badge/🌐%20Website-Project%20Page-green)](https://nju-pcalab.github.io/projects/MotionSight/)
-
 <h2>MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h2>
 
 <div style="font-size: 1.2em">
@@ -32,6 +26,9 @@
     * Equal contribution. &nbsp;&nbsp; † Corresponding author.
 </div>
 
+[![Paper](https://img.shields.io/badge/📝%20Paper-arXiv-red)](https://arxiv.org/abs/2506.01674)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://github.com/NJU-PCALab/MotionSight)
+[![Website](https://img.shields.io/badge/🌐%20Website-Project%20Page-green)](https://nju-pcalab.github.io/projects/MotionSight/)
 </div>
 
 Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion understanding. This guide provides instructions for environment setup, model preparation, and evaluation.
