@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h2>MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h2>
+<h1>MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h1>
 
 <div style="font-size: 1.2em">
     <a href="https://github.com/natsunoshion">Yipeng Du</a><sup>1*</sup> &nbsp;&nbsp;
