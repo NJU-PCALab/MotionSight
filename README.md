@@ -169,5 +169,4 @@ If you use MotionSight in your research, please cite our paper:
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2506.01674}, 
 }
-
 ```
