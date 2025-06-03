@@ -110,4 +110,14 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 If you use MotionSight in your research, please cite our paper:
 
 ```
+@misc{du2025motionsightboostingfinegrainedmotion,
+      title={MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs}, 
+      author={Yipeng Du and Tiehan Fan and Kepan Nan and Rui Xie and Penghao Zhou and Xiang Li and Jian Yang and Zhenheng Yang and Ying Tai},
+      year={2025},
+      eprint={2506.01674},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.01674}, 
+}
+
 ```
