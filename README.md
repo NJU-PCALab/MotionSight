@@ -46,7 +46,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-org/MotionSight.git
+   git clone https://github.com/NJU-PCALab/MotionSight
    cd MotionSight
    ```
 
