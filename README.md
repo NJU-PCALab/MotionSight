@@ -1,21 +1,36 @@
-# MotionSight
+# 🔍 MotionSight
+
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/📝%20Paper-arXiv-red)](https://arxiv.org/abs/2506.01674)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://huggingface.co/collections/MotionSight/MotionBench)
+[![Website](https://img.shields.io/badge/🌐%20Website-Project%20Page-green)](https://nju-pcalab.github.io/projects/MotionSight/)
+
+</div>
 
 Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion understanding. This guide provides instructions for environment setup, model preparation, and evaluation.
 
 ---
 
-## Table of Contents
+## 📣 News
+
+- **[2025.06.03]** 🚀 Initial release of MotionSight framework
+
+---
+
+## 📋 Table of Contents
 
 1. [Prerequisites](#prerequisites)
 2. [Environment Setup](#environment-setup)
 3. [Model Preparation](#model-preparation)
 4. [Evaluation](#evaluation)
-5. [Troubleshooting & FAQ](#troubleshooting--faq)
-6. [Citation](#citation)
+5. [MotionVid Examples](#motionvid-examples)
+6. [Troubleshooting & FAQ](#troubleshooting--faq)
+7. [Citation](#citation)
 
 ---
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 - **Operating System:** Linux (Ubuntu 20.04/22.04 recommended)
 - **Python:** 3.8 or higher
@@ -24,7 +39,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 ---
 
-## Environment Setup
+## 🔧 Environment Setup
 
 1. **Clone the Repository**
 
@@ -50,7 +65,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 ---
 
-## Model Preparation
+## 📦 Model Preparation
 
 1. **Download and Integrate GroundedSAM2**
 
@@ -85,7 +100,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 ---
 
-## Evaluation
+## 📊 Evaluation
 
 - To evaluate the results on the MotionBench or FAVOR-Bench benchmark:
     ```bash
@@ -96,7 +111,40 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 ---
 
-## Troubleshooting & FAQ
+## 🎬 MotionVid Examples
+
+MotionVid is our specialized module for processing and analyzing fine-grained motion in video content. It provides tools for detailed motion tracking, temporal understanding, and multi-object interaction analysis.
+
+### 📊 Sample Videos and Analysis
+
+Our framework includes several sample videos that demonstrate MotionVid's capabilities:
+
+| Video | Description | Focus Area |
+|-------|-------------|------------|
+| [📹 pexels_landscape_landscape_7895832_002.mp4](MotionVid/samples/pexels_landscape_landscape_7895832_002.mp4) | Train moving through desert landscape | Object tracking across complex terrain |
+| [📹 pixabay_Beach_Sunrise_37084_001.mp4](MotionVid/samples/pixabay_Beach_Sunrise_37084_001.mp4) | Vehicles driving in desert with dust trails | Camera movement and environmental effects |
+| [📹 v_JNr0oI927ng_t0.13-5.64.mp4](MotionVid/samples/v_JNr0oI927ng_t0.13-5.64.mp4) | Person on diving board | Subtle human motion analysis |
+| [📹 -eq3I7gRqTI_000100_000110.mp4](MotionVid/samples/-eq3I7gRqTI_000100_000110.mp4) | Person mowing lawn with passing vehicle | Multi-object interaction |
+| [📹 DKZPW.mp4](MotionVid/samples/DKZPW.mp4) | Person interacting with pet and objects | Complex sequence analysis |
+
+The module includes a [`show.json`](MotionVid/samples/show.json) file that pairs videos with question-answer examples.
+
+
+### 🎦 Working with Sample Videos
+
+To see these videos in action with MotionSight analysis:
+
+```bash
+# Run the MotionBench evaluation pipeline
+python -m eval.motionsight.eval_motionbench
+
+# When implemented, you'll be able to process individual videos
+# python process_video.py --input MotionVid/samples/DKZPW.mp4 --output results/
+```
+
+More detailed examples of video processing will be provided in upcoming documentation.
+
+## ❓ Troubleshooting & FAQ
 
 - **Q:** I encounter CUDA or dependency errors.
   - **A:** Double-check your CUDA version and ensure all dependencies are installed with compatible versions.
@@ -105,7 +153,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 ---
 
-## Citation
+## 📝 Citation
 
 If you use MotionSight in your research, please cite our paper:
 
