@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="logo.png" alt="MotionSight Logo" width="400"/>
+<img src="logo.png" alt="MotionSight Logo" width="1000"/>
 
 [![Paper](https://img.shields.io/badge/📝%20Paper-arXiv-red)](https://arxiv.org/abs/2506.01674)
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://huggingface.co/collections/MotionSight/MotionBench)
