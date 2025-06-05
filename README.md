@@ -178,7 +178,7 @@ More detailed examples of video processing will be provided in upcoming document
 
 ## 📝 Citation
 
-If you use MotionSight in your research, please cite our paper:
+We would be grateful if you would consider citing our paper when MotionSight has been helpful in your research.
 
 ```
 @misc{du2025motionsightboostingfinegrainedmotion,
