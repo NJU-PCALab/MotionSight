@@ -27,7 +27,7 @@
 </div>
 
 [![Paper](https://img.shields.io/badge/📝%20Paper-arXiv-red)](https://arxiv.org/abs/2506.01674)
-[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Coming%20Soon-blue)](https://github.com/NJU-PCALab/MotionSight)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Huggingface-blue)](https://huggingface.co/datasets/nkp37/MotionSight/tree/main)
 [![Website](https://img.shields.io/badge/🌐%20Website-Project%20Page-green)](https://nju-pcalab.github.io/projects/MotionSight/)
 </div>
 
@@ -36,7 +36,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 ---
 
 ## 📣 News
-
+- **[2025.06.08]** 📢 New Dataset Release on Hugging Face! 
 - **[2025.06.03]** 🚀 Initial release of MotionSight framework
 
 ---
