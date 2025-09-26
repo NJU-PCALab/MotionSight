@@ -36,7 +36,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 ---
 
 ## 📣 News
-- **[2025.09.27]** 📢 MotionChat Release on ModelScope!
+- **[2025.09.26]** 📢 MotionChat Release on ModelScope!
 - **[2025.06.08]** 📢 New Dataset Release on Hugging Face!
 - **[2025.06.03]** 🚀 Initial Release of MotionSight
 
