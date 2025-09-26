@@ -22,19 +22,15 @@ def parse_args():
     parser.add_argument('--num_gpus', type=int, default=torch.cuda.device_count(),
                         help='Number of GPUs to use')
     parser.add_argument('--checkpoint_path', type=str,
-                        default="/path/to/checkpoint",
                         help='Path to model checkpoint')
-    parser.add_argument('--data_file', type=str,
-                        default='./eval/favor/video_perspective.json',
+    parser.add_argument('--stage', type=int)
+    parser.add_argument('--favor_pos', type=str,
                         help='Path to data file')
-    parser.add_argument('--video_dir', type=str,
-                        default="/path/to/FAVOR-Bench",
-                        help='Directory of video files')
-    parser.add_argument('--output_filename', type=str, default="motionchat_favor_parallel.jsonl",
+    parser.add_argument('--output_filename', type=str, default="motionchat_favor.jsonl",
                         help='Output filename')
     parser.add_argument('--resume', type=int, default=0,
                         help='Index to resume evaluation from')
-    parser.add_argument('--restore_name', type=str, default='restore_qwenfavor_parallel',
+    parser.add_argument('--restore_name', type=str, default='restore_qwenfavor',
                         help='Directory name to save video frames')
     parser.add_argument('--num_segs', type=int, default=16,
                         help='Number of video segments')
@@ -61,7 +57,7 @@ def save_frames(video_path, restore_name, do_fps=True, num_segs=16, return_msg=F
     fps = clip.fps
 
     video_name = video_path.split("/")[-1].split(".")[0]
-    save_dir = f'./{restore_name}/{video_name}_dense' if dense else f'./{restore_name}/{video_name}'
+    save_dir = f'./temp/{restore_name}/{video_name}_dense' if dense else f'./temp/{restore_name}/{video_name}'
     os.makedirs(save_dir, exist_ok=True)
 
     if do_fps:
@@ -174,7 +170,7 @@ def process_chunk(gpu_id, data_chunk, args, output_lock, temp_output_path):
             print(f"GPU {gpu_id} - Skipping already processed video: {video_name}")
             continue
 
-        video_path = os.path.join(args.video_dir, video_name)
+        video_path = os.path.join(args.favor_pos, "videos/FAVOR-Bench", video_name)
         if not os.path.exists(video_path):
             print(f"GPU {gpu_id} - Video does not exist: {video_path}")
             continue
@@ -191,7 +187,10 @@ def process_chunk(gpu_id, data_chunk, args, output_lock, temp_output_path):
             formatted_options_str = '\n'.join(formatted_options)
 
             # prompt = f"Carefully watch the video and pay attention to temporal dynamics in this video, focusing on the camera motions, actions, activities, and interactions. Based on your observations, select the best option that accurately addresses the question.\n{question['question']}\nYou can only respond with the answer among {formatted_options_str}"
-            prompt = f"{question['question']}\n{formatted_options_str}"
+            if args.stage == 2:
+                prompt = f"Describe the movements of the main subjects in this clip.\n{question['question']}\n{formatted_options_str}\nPlease respond with only the letter of the correct answer."
+            else:
+                prompt = f"{question['question']}\n{formatted_options_str}"
 
             try:
                 output_text = run(model, processor, video_path, prompt,
@@ -243,10 +242,11 @@ def main():
     args = parse_args()
 
     # Ensure output directory exists
-    os.makedirs(f"./{args.restore_name}", exist_ok=True)
+    os.makedirs("temp/", exist_ok=True)
+    os.makedirs(f"./temp/{args.restore_name}", exist_ok=True)
 
     # Read data
-    with open(args.data_file, 'r') as f:
+    with open(os.path.join(args.favor_pos, "video_perspective.json"), 'r') as f:
         data = json.load(f)
 
     if args.resume > 0:

@@ -1,8 +1,8 @@
-# 🔍 MotionSight
+<!-- # 🔍 MotionSight -->
 
 <div align="center">
 
-<h1>MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h1>
+<h1>🔍 MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs</h1>
 
 <div style="font-size: 1.2em">
     <a href="https://github.com/natsunoshion">Yipeng Du</a><sup>1*</sup> &nbsp;&nbsp;
@@ -36,8 +36,9 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 ---
 
 ## 📣 News
-- **[2025.06.08]** 📢 New Dataset Release on Hugging Face! 
-- **[2025.06.03]** 🚀 Initial release of MotionSight framework
+- **[2025.09.27]** 📢 MotionChat Release on ModelScope!
+- **[2025.06.08]** 📢 New Dataset Release on Hugging Face!
+- **[2025.06.03]** 🚀 Initial Release of MotionSight
 
 ---
 
@@ -58,7 +59,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 - **Operating System:** Linux (Ubuntu 20.04/22.04 recommended)
 - **Python:** 3.8 or higher
 - **CUDA:** 11.3+ (for GPU acceleration)
-- **Hardware:** GPU with at least 24GB VRAM recommended
+- **Hardware:** for Qwen2.5VL-7B, GPU with at least 24GB VRAM recommended
 
 ---
 
@@ -73,7 +74,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 
 2. **Install Python Dependencies**
 
-   It is highly recommended to use a virtual environment:
+   It is highly recommended to use a virtual environment, e.g. conda, uv, venv. Here is an example of using python venv:
 
    ```bash
    python3 -m venv .venv
@@ -99,11 +100,19 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
    - Download all required checkpoints as specified in the GroundedSAM2 documentation.
    - Place the entire `GroundedSAM2` folder (with checkpoints) into the root of the MotionSight project directory, like `MotionSight/Grounded-SAM-2`.
 
-2. **Prepare Tracking Utilities**
+<!-- 2. **Prepare Tracking Utilities** -->
 
-   - Move `track_utils.py` into the `GroundedSAM2/` directory:
+   - Make sure `track_utils.py` is in the `GroundedSAM2/` directory:
      ```bash
      mv track_utils.py GroundedSAM2/
+     ```
+
+2. **Prepare Multimodal Large Language Model (MLLM) Checkpoints**
+
+   - Download the MLLM checkpoints (e.g., Qwen2.5-VL-7B-Instruct) and place them in the appropriate directory.
+   - You can selectively start the LLM server using [lmdeploy](https://github.com/InternLM/lmdeploy), for example:
+     ```bash
+     lmdeploy serve api_server '/path/to/Qwen2.5-VL-7B-Instruct' --server-port 23333 --tp 1
      ```
    - Launch the tracking server (adjust `--p` and `--step` as needed for your setup):
      ```bash
@@ -111,24 +120,25 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
      python track_utils.py --p 1 --step 10000
      cd ..
      ```
-
-3. **Prepare Multimodal Large Language Model (MLLM) Checkpoints**
-
-   - Download the MLLM checkpoints (e.g., Qwen2.5-VL-7B-Instruct) and place them in the appropriate directory.
-   - You can selectively start the LLM server using [lmdeploy](https://github.com/InternLM/lmdeploy), for example:
-     ```bash
-     lmdeploy serve api_server '/path/to/Qwen2.5-VL-7B-Instruct' --server-port 23333 --tp 1
-     ```
    - Ensure the server is running and accessible at the specified port.
+
+3. **Train using our <span style="font-family: monospace; background-color: transparent;">MotionVid-QA</span> dataset**:
+
+    - We used [Qwen2-VL-Finetune](https://github.com/2U1/Qwen2-VL-Finetune) for fine-tuning. Our public dataset includes the fine-tuning config we used for Qwen2.5-VL. You can follow the instructions at [Qwen2-VL-Finetune](https://github.com/2U1/Qwen2-VL-Finetune) to configure it accordingly.
+    - Download our fine-tuned model at [MotionChat](https://www.modelscope.cn/models/Lollikit/MotionChat/files).
 
 ---
 
 ## 📊 Evaluation
 
-- To evaluate the results on the MotionBench or FAVOR-Bench benchmark:
+- To evaluate the results of <span style="font-family: monospace; background-color: transparent;">MotionSight</span> on the MotionBench or FAVOR-Bench benchmark:
     ```bash
     python -m eval.motionsight.eval_motionbench
     python -m eval.motionsight.eval_favorbench
+    ```
+- To evaluate our fine-tuned <span style="font-family: monospace; background-color: transparent;">MotionChat</span>:
+    ```bash
+    python -m eval.motionchat.motionchat --stage 2 --checkpoint "/path/to/checkpoint" --favor_pos "/path/to/FAVOR/"
     ```
 - Ensure all evaluation datasets and configuration files are properly set up.
 
@@ -182,12 +192,12 @@ We would be grateful if you would consider citing our paper when MotionSight has
 
 ```
 @misc{du2025motionsightboostingfinegrainedmotion,
-      title={MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs}, 
+      title={MotionSight: Boosting Fine-Grained Motion Understanding in Multimodal LLMs},
       author={Yipeng Du and Tiehan Fan and Kepan Nan and Rui Xie and Penghao Zhou and Xiang Li and Jian Yang and Zhenheng Yang and Ying Tai},
       year={2025},
       eprint={2506.01674},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.01674}, 
+      url={https://arxiv.org/abs/2506.01674},
 }
 ```
