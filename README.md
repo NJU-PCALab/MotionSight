@@ -36,6 +36,7 @@ Welcome to **MotionSight**, a cutting-edge framework for fine-grained motion und
 ---
 
 ## 📣 News
+- **[2026.01.26]** 🎉 Our paper has been accepted to **ICLR 2026**!
 - **[2025.09.26]** 📢 MotionChat Release on ModelScope!
 - **[2025.06.08]** 📢 New Dataset Release on Hugging Face!
 - **[2025.06.03]** 🚀 Initial Release of MotionSight
